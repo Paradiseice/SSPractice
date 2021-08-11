@@ -1,0 +1,23 @@
+﻿@model WordsInfoViewModel
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Слово</th>
+            <th scope="col">Кол-во</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var word in Model.words)
+        {
+            <tr>
+                <td>
+                    @word.Key
+                </td>
+                <td>
+                    @word.Value
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
